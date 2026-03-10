@@ -123,7 +123,7 @@ void readLogsFromFile(LogList *list, const char *filename) {
         // Basit bir ayristirma (Parse) islemi
         sscanf(line, "%15[^0-9]%*s %15s %[^\n]", ts, lvl, msg);
         // Not: Gercek syslog formatina gore basitlestirilmistir.
-        appendLog(list, "Mar 10 09:xx", lvl, msg);
+        appendLog(list, ts, lvl, msg);
     }
     fclose(f);
 }
